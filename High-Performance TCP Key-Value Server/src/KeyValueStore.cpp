@@ -8,7 +8,6 @@ string KeyValueStore::get(string key) {
     if (map.find(key) != map.end()) {
         return map[key];
     }
-
     return "";
 }
 
@@ -17,15 +16,13 @@ bool KeyValueStore::remove(string key) {
         map.erase(key);
         return true;
     }
-
     return false;
 }
 
 bool KeyValueStore::exists(string key) {
-    if (map.find(key) != map.end()) {
+    if (map.find(key)!=map.end()) {
         return true;
     }
-
     return false;
 }
 
@@ -88,3 +85,4 @@ string KeyValueStore::commandparser(string command){
     }
     return "ERROR";
 }
+
